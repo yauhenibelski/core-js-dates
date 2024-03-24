@@ -47,7 +47,10 @@ function getTime(date) {
  * '2024-01-30T00:00:00.000Z' => 'Tuesday'
  */
 function getDayName(date) {
-  return new Date(date).toLocaleDateString('en-US', { weekday: 'long' });
+  return new Date(date).toLocaleDateString('en-US', {
+    timeZone: 'UTC',
+    weekday: 'long',
+  });
 }
 
 /**
